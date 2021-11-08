@@ -8,7 +8,7 @@ Unity UI Toolkit
 ## 2.安装UI Builder
    - 通过修改项目下-->Packages-->manifest.json 方式安装
       - 添加 "com.unity.ui.builder": "1.0.0-preview.18"
-         关于版本的问题我的理解是要和UIToolkit对应起来，如果出现错误unity会提示你修改的。
+         - 关于版本的问题我的理解是要和UIToolkit对应起来，如果出现错误unity会提示你修改的。
    - 应该有其他安装方式,暂时没有过多关注.
 ## 3.编写一个Hello world!
    1. 创建一个空的GameObject
@@ -19,15 +19,15 @@ Unity UI Toolkit
       - Inspector面板 单击 Add Component
       - 添加相应的组件
    3. 为刚刚创建的GameObject添加 Panel 和 Source
-     - 1) Project-->Assets下新建UI文件夹（可选）
-     - 2) 在1)创建的文件夹下创建 Panel Settings Asset
-          - 具体步骤 Create --> UI Toolkit --> Panel Settings Asset
-     - 3) 在1)创建的文件夹下创建 Source
-          - 具体步骤 Create --> UI Toolkit --> UI Document
-     - 4) 将 2),3)的文件连接到创建的GameObject
-      - 选中GameObject
-      - 将2)创建的Panel拖动到 GameObject下UI Document下的PanelSettings
-      - 将3)创建的Source拖动到 GameObject下UI Document下的Source Asset
+       - 1) Project-->Assets下新建UI文件夹（可选）
+       - 2) 在1)创建的文件夹下创建 Panel Settings Asset
+            - 具体步骤 Create --> UI Toolkit --> Panel Settings Asset
+       - 3) 在1)创建的文件夹下创建 Source
+            - 具体步骤 Create --> UI Toolkit --> UI Document
+       - 4) 将 2),3)的文件连接到创建的GameObject
+        - 选中GameObject
+        - 将2)创建的Panel拖动到 GameObject下UI Document下的PanelSettings
+        - 将3)创建的Source拖动到 GameObject下UI Document下的Source Asset
    4. 编写UI
       - 1) 选中3-->3)创建的UI Document 右键Open 会弹出 UI BUilder面板
       - 2) 将Controls(左下角)面板中的Label 拖动到Hierarchy面板
