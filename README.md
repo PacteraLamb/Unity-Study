@@ -43,8 +43,9 @@ Unity UI Toolkit
           ```css
             .MyUI{
               color: red;
-              display: flex;
-              justify-content: center;
             }
           ``` 
+       - 4) 将刚刚创建的样式添加到Source
+        参考第四步的 编写UI 找到Style Class List输入刚才书写的MyUI 单击Add Style Class to List
+       - 5) 保存 回到unity的Game窗口 可以看到已我们刚才创建的组件 文字已经变成红色了
   
