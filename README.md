@@ -10,6 +10,7 @@ Unity UI Toolkit
       - 添加 "com.unity.ui.builder": "1.0.0-preview.18"
          - 关于版本的问题我的理解是要和UIToolkit对应起来，如果出现错误unity会提示你修改的。
    - 应该有其他安装方式,暂时没有过多关注.
+   - 官方安装方式 https://docs.unity3d.com/Packages/com.unity.ui.builder@1.0/manual/index.html
 ## 3.编写一个Hello world!
    1. 创建一个空的GameObject
       - Hierarchy 下右键 --> Create Empty
@@ -49,6 +50,7 @@ Unity UI Toolkit
        - 保存 回到unity的Game窗口 可以看到已我们刚才创建的组件 文字已经变成红色了
   ## 4.一些与CSS不太相同的样式属性
     ```
-      文字居中 -unity-text-align: upper-center;
+      文字水平居中 -unity-text-align: upper-center;
+      文字水平垂直居中 -unity-text-align: middle-center;
       文字加粗 -unity-font-style: bold;
     ```
