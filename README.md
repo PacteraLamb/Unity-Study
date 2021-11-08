@@ -19,7 +19,7 @@ Unity UI Toolkit
       - Inspector面板 单击 Add Component
       - 添加相应的组件
    3. 为刚刚创建的GameObject添加 Panel 和 Source
-       1) Project-->Assets下新建UI文件夹（可选）
+       - 1) Project-->Assets下新建UI文件夹（可选）
        - 2) 在1)创建的文件夹下创建 Panel Settings Asset
             - 具体步骤 Create --> UI Toolkit --> Panel Settings Asset
        - 3) 在1)创建的文件夹下创建 Source
