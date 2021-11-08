@@ -12,7 +12,6 @@ Unity UI Toolkit
    - 应该有其他安装方式,暂时没有过多关注.
 ## 3.编写一个Hello world!
    1. 创建一个空的GameObject
-   
       - Hierarchy 下右键 --> Create Empty
    2. 为GameObject添加UI Document、Input System Event System(UI ToolKit)组件
       - 选中刚刚创建的GameObject 
