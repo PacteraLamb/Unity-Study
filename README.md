@@ -14,11 +14,11 @@ Unity UI Toolkit
    1. 创建一个空的GameObject
       - Hierarchy 下右键 --> Create Empty
    2. 为GameObject添加UI Document、Input System Event System(UI ToolKit)组件
-    -
-    - 添加方法  
-    - 选中刚刚创建的GameObject 
-    - Inspector面板 单击 Add Component
-    - 添加相应的组件
+      -
+      - 添加方法  
+      - 选中刚刚创建的GameObject 
+      - Inspector面板 单击 Add Component
+      - 添加相应的组件
    3. 为刚刚创建的GameObject添加 Panel 和 Source
        - Project-->Assets下新建UI文件夹（可选）
        - 在第一步创建的文件夹下创建 Panel Settings Asset
