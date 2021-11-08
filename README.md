@@ -20,8 +20,31 @@ Unity UI Toolkit
       - 添加相应的组件
    - 3.为刚刚创建的GameObject添加 Panel 和 Source
      - 1) Project-->Assets下新建UI文件夹（可选）
-     - 2) 在第一步创建的文件夹下创建 Panel Settings Asset
+     - 2) 在1)创建的文件夹下创建 Panel Settings Asset
           - 具体步骤 Create --> UI Toolkit --> Panel Settings Asset
-     - 3) 在第一步创建的文件夹下创建 Source
+     - 3) 在1)创建的文件夹下创建 Source
           - 具体步骤 Create --> UI Toolkit --> UI Document
      - 4) 将 2),3)的文件连接到创建的GameObject
+      - 选中GameObject
+      - 将2)创建的Panel拖动到 GameObject下UI Document下的PanelSettings
+      - 将3)创建的Source拖动到 GameObject下UI Document下的Source Asset
+    - 4.编写UI
+      - 1) 选中3-->3)创建的UI Document 右键Open 会弹出 UI BUilder面板
+      - 2) 将Controls(左下角)面板中的Label 拖动到Hierarchy面板
+      - 3) 选中Label 右侧Inspector面板 Label组下的Text输入Hello World！
+      - 4) 保存 回到unity的Game窗口 可以看到已经出现的我们刚才创建的组件
+    - 5.添加USS文件为组件自定义样式
+      - 1) 在第三步创建的UI文件夹下创建USS文件
+        - 具体步骤 Create --> UI Toolkit --> Style Sheet
+      - 2) 编辑Source(第三步创建的UI Document)
+        - 用文本编辑工具打开后在<ui:UXML ...></<ui:UXML>标签之间添加 <Style src="MyUI.uss" /> MyUI.uss为刚刚第一步创建的文件
+      - 3) 像写css一样写一个样式
+        - 第一步创建的文件下添加
+          ```css
+            .MyUI{
+              color: red;
+              display: flex;
+              justify-content: center;
+            }
+          ``` 
+  
