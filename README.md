@@ -14,6 +14,7 @@ Unity UI Toolkit
    1. 创建一个空的GameObject
       - Hierarchy 下右键 --> Create Empty
    2. 为GameObject添加UI Document、Input System Event System(UI ToolKit)组件
+   
     - 添加方法  
     - 选中刚刚创建的GameObject 
     - Inspector面板 单击 Add Component
