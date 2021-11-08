@@ -48,4 +48,4 @@ Unity UI Toolkit
         参考第四步的 编写UI 找到Style Class List输入刚才书写的MyUI 单击Add Style Class to List
        - 保存 回到unity的Game窗口 可以看到已我们刚才创建的组件 文字已经变成红色了
   ## 4.一些与CSS不太相同的样式属性
-    ### 文字居中 -unity-text-align: upper-center;
+    文字居中 -unity-text-align: upper-center;
