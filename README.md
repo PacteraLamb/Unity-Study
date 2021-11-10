@@ -1,5 +1,5 @@
-# Unity-UI Toolkit. &&  GUI
-# Unity UI Toolkit
+# Unity-UI Toolkit. &&  UGUI
+# Unity UI Toolkit。  个人感觉目前还不够完善，使用起来还不够UGUI灵活
 ## 1.从 Package Manager 安装 UI 工具包软件包：
   - 1.单击 Add (+) 
   - 2.从菜单中选择 Add package from git URL… 
@@ -54,7 +54,7 @@
       文字水平垂直居中 -unity-text-align: middle-center;
       文字加粗 -unity-font-style: bold;
     ```
-# GUI
+# UGUI
 
 ## 当使用Canvas Group模拟点击的显示与隐藏时，可能会因为图层顺序原因导致无法点击。
   - 解决办法。在外层套一个空的GameObject，通过SetActive来控制物体的显示与隐藏
