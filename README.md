@@ -60,6 +60,6 @@
   - 解决办法。在外层套一个空的GameObject，通过SetActive来控制物体的显示与隐藏
 ## 如何将Canvas导出复用
   - 将Canvas做成预制体
-  - 1. 新建Perfabs文件夹
-  - 2. 将要导出的Canvas拖入Perfabs
-  - 3. 右键导出
+  1. 新建Perfabs文件夹
+  2. 将要导出的Canvas拖入Perfabs
+  3. 右键导出
