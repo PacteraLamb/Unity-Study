@@ -1,5 +1,5 @@
 # Unity-UI Toolkit. &&  UGUI
-# Unity UI Toolkit。  个人感觉目前还不够完善，使用起来还不够UGUI灵活
+# Unity UI Toolkit。  个人感觉目前还不够完善，使用起来还不如UGUI灵活
 ## 1.从 Package Manager 安装 UI 工具包软件包：
   - 1.单击 Add (+) 
   - 2.从菜单中选择 Add package from git URL… 
