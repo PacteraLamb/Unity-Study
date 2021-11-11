@@ -58,3 +58,8 @@
 
 ## 当使用Canvas Group模拟点击的显示与隐藏时，可能会因为图层顺序原因导致无法点击。
   - 解决办法。在外层套一个空的GameObject，通过SetActive来控制物体的显示与隐藏
+## 如何将Canvas导出复用
+  - 将Canvas做成预制体
+  - 1. 新建Perfabs文件夹
+  - 2. 将要导出的Canvas拖入Perfabs
+  - 3. 右键导出
