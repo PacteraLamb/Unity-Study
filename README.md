@@ -64,5 +64,5 @@
   2. 将要导出的Canvas拖入Perfabs
   3. 右键导出
 ## Button按钮可视化实现 按钮点击更换按钮的背景
-  1. 将Inspector面板下的Button组件的<b>Transition</b>设置成Sprite Swap
+  1. 将Inspector面板下的Button组件的<b>Transition</b>设置成<b>Sprite Swap</b>
   2. 将Transition属性下的<b>Selected Sprite</b>属性设置成想要更换的背景即可
