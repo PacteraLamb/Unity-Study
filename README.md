@@ -70,6 +70,7 @@
   
 # Unity中一些脚本的笔记
 ## 通过实现IPointerClickHandler接口来实现点击事件
+直接挂到物体上即可实现点击，不需要其它的指定
 ```c#
 public class ChangeShader : MonoBehaviour,IPointerClickHandler
 {
