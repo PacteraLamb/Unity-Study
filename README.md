@@ -67,5 +67,24 @@
   1. 将Inspector面板下的Button组件的<b>Transition</b>设置成<b>Sprite Swap</b>
   2. 将Transition属性下的<b>Selected Sprite</b>属性设置成想要更换的背景即可
   
+  
 # Unity中一些脚本的笔记
-通过实现IPointerClickHandler接口来实现点击事件
+## 通过实现IPointerClickHandler接口来实现点击事件
+```c#
+public class ChangeShader : MonoBehaviour,IPointerClickHandler
+{
+    void Start()
+    {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    public void OnPointerClick(PointerEventData eventData)
+    {
+      //业务处理  
+    }
+}
+```
