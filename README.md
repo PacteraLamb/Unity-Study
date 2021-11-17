@@ -94,3 +94,12 @@ public class ChangeShader : MonoBehaviour,IPointerClickHandler
 ```c#
   new Color(68 / 255f, 138 / 255f, 255 / 255f))
 ```
+## 关于使用Resources加载本地模型的问题
+### 加载的模型可能会位于（0，0，0）坐标，如果此时相机的坐标也是0，0，0难么可能会导致无法看到加载的物体，此时需要动态的设置一下加载的物体的坐标以达到想要的效果
+```c#
+  //把资源加载到内存中
+  Object cubePreb = Resources.Load("Prefabs/Cube", typeof(GameObject));
+  //用加载得到的资源对象，实例化游戏对象，实现游戏物体的动态加载
+  GameObject cube = Instantiate(cubePreb) as GameObject;
+  cube.transform.position = new Vector3(0,0,10);
+ ```
