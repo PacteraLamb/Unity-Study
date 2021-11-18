@@ -129,5 +129,6 @@ public class ChangeShader : MonoBehaviour,IPointerClickHandler
   }
 ```
   该脚本在 Assets 菜单底部创建一个名为Build AssetBundles的菜单项，用于执行与该标签关联的函数中的代码。当您单击Build AssetBundles 时，会出现一个带有构建对话框的进度条。这将获取您用 AssetBundle 名称标记的所有资产，并将它们放置在路径assetBundleDirectory定义的文件夹中。
+  
   2.加载 AssetBundles 和 Assets
-  从本地存储加载，<storng>AssetBundles.LoadFromFile</storng>API
+  从本地存储加载，<s>AssetBundles.LoadFromFile</s>API
