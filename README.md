@@ -131,7 +131,7 @@ AssetBundles官方文档 --> https://docs.unity3d.com/Manual/AssetBundles-Workfl
 ```
   该脚本在 Assets 菜单底部创建一个名为Build AssetBundles的菜单项，用于执行与该标签关联的函数中的代码。当您单击Build AssetBundles 时，会出现一个带有构建对话框的进度条。这将获取您用 AssetBundle 名称标记的所有资产，并将它们放置在路径assetBundleDirectory定义的文件夹中。
   
-  2.加载 AssetBundles 和 Assets
+  2.本地加载 AssetBundles 和 Assets
   从本地存储加载，<strong>AssetBundles.LoadFromFile</strong>API
   ```c#
     public class LoadFromFileExample : MonoBehaviour {
@@ -151,5 +151,26 @@ AssetBundles官方文档 --> https://docs.unity3d.com/Manual/AssetBundles-Workfl
           GameObject car_911 =  Instantiate(prefab) as GameObject;
           car_911.transform.position = new Vector3(0,0,15);
       }
+    }
+  ```
+  3.自己托管AB包  结合UnityWebRequest实现动态加载
+  ```c#
+    IEnumerator InstantiateObject()
+    {
+        //托管的AB包为打包出来的两个文件（.manifest 和 另一个无后缀文件）中的无后缀文件
+        string url = "要加载的AB包的路径";
+        UnityWebRequest www = UnityWebRequestAssetBundle.GetAssetBundle(url, 0); ;
+        yield return www.SendWebRequest(); ;
+        if (www.result != UnityWebRequest.Result.Success)
+        {
+            Debug.Log(www.error);
+        }
+        else
+        {
+            AssetBundle bundle = DownloadHandlerAssetBundle.GetContent(www);
+            GameObject prefab = bundle.LoadAsset<GameObject>("car-911");
+            GameObject car_911 = Instantiate(prefab) as GameObject;
+            car_911.transform.position = new Vector3(0, 0, 15);
+        }
     }
   ```
