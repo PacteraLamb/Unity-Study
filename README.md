@@ -104,6 +104,7 @@ public class ChangeShader : MonoBehaviour,IPointerClickHandler
   cube.transform.position = new Vector3(0,0,10);
  ```
 ## 关于unity的打包AssetBundles和加载问题
+AssetBundles官方文档 --> https://docs.unity3d.com/Manual/AssetBundles-Workflow.html
 ###  打包
 1.构建 AssetBundles
   在 Assets 文件夹中创建一个名为 Editor 的文件夹，并在该文件夹中放置一个包含以下内容的脚本：
