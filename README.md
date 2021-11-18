@@ -103,3 +103,27 @@ public class ChangeShader : MonoBehaviour,IPointerClickHandler
   GameObject cube = Instantiate(cubePreb) as GameObject;
   cube.transform.position = new Vector3(0,0,10);
  ```
+## 关于unity的打包AssetBundles和加载问题
+###  打包
+1.构建 AssetBundles
+  在 Assets 文件夹中创建一个名为 Editor 的文件夹，并在该文件夹中放置一个包含以下内容的脚本：
+  ```c3
+  using UnityEditor;
+  using System.IO;
+
+  public class CreateAssetBundles
+  {
+      [MenuItem("Assets/Build AssetBundles")]
+      static void BuildAllAssetBundles()
+      {
+          string assetBundleDirectory = "Assets/AssetBundles";
+          if(!Directory.Exists(assetBundleDirectory))
+          {
+              Directory.CreateDirectory(assetBundleDirectory);
+          }
+          BuildPipeline.BuildAssetBundles(assetBundleDirectory, 
+                                          BuildAssetBundleOptions.None, 
+                                          BuildTarget.StandaloneWindows);
+      }
+  }
+```
