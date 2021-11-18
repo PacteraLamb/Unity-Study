@@ -131,4 +131,24 @@ public class ChangeShader : MonoBehaviour,IPointerClickHandler
   该脚本在 Assets 菜单底部创建一个名为Build AssetBundles的菜单项，用于执行与该标签关联的函数中的代码。当您单击Build AssetBundles 时，会出现一个带有构建对话框的进度条。这将获取您用 AssetBundle 名称标记的所有资产，并将它们放置在路径assetBundleDirectory定义的文件夹中。
   
   2.加载 AssetBundles 和 Assets
-  从本地存储加载，<s>AssetBundles.LoadFromFile</s>API
+  从本地存储加载，<strong>AssetBundles.LoadFromFile</strong>API
+  ```c#
+    public class LoadFromFileExample : MonoBehaviour {
+      void Start() {
+          //Combine拼接方法 参数一为步骤1中设置的路径 参数二（car-911）为打包的ab包的名字
+          var myLoadedAssetBundle = AssetBundle.LoadFromFile(Path.Combine("Assets/AssetBundles/","car-911"));
+          if (myLoadedAssetBundle == null)
+          {
+              Debug.Log("Failed to load AssetBundle!");
+              return;
+          }
+          //此处的car-911为模型名字
+          var prefab = myLoadedAssetBundle.LoadAsset<GameObject>("car-911");
+          //加载模型
+          Instantiate(prefab);
+          //因为Instantiate(prefab) 默认将模型加载到0，0，0坐标位置，如果要设置坐标可以参考下列的加载方法
+          GameObject car_911 =  Instantiate(prefab) as GameObject;
+          car_911.transform.position = new Vector3(0,0,15);
+      }
+    }
+  ```
