@@ -69,7 +69,7 @@
   
   
 # Unity中一些脚本的笔记
-## 通过实现IPointerClickHandler接口来实现点击事件
+## 1.通过实现IPointerClickHandler接口来实现点击事件
 直接挂到物体上即可实现点击，不需要其它的指定
 ```c#
 public class ChangeShader : MonoBehaviour,IPointerClickHandler
@@ -89,12 +89,12 @@ public class ChangeShader : MonoBehaviour,IPointerClickHandler
     }
 }
 ```
-## 关于 Color类的事项
+## 2.关于 Color类的事项
 当使用RGB值时要/255f 才能的到相应的值
 ```c#
   new Color(68 / 255f, 138 / 255f, 255 / 255f))
 ```
-## 关于使用Resources加载本地模型的问题
+## 3.关于使用Resources加载本地模型的问题
 ### 加载的模型可能会位于（0，0，0）坐标，如果此时相机的坐标也是0，0，0难么可能会导致无法看到加载的物体，此时需要动态的设置一下加载的物体的坐标以达到想要的效果
 ```c#
   //把资源加载到内存中
@@ -103,7 +103,7 @@ public class ChangeShader : MonoBehaviour,IPointerClickHandler
   GameObject cube = Instantiate(cubePreb) as GameObject;
   cube.transform.position = new Vector3(0,0,10);
  ```
-## 关于unity的打包AssetBundles和加载问题
+## 4.关于unity的打包AssetBundles和加载问题
 AssetBundles官方文档 --> https://docs.unity3d.com/Manual/AssetBundles-Workflow.html
 ###  打包
 1.构建 AssetBundles
