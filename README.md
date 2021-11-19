@@ -167,6 +167,7 @@ AssetBundles官方文档 --> https://docs.unity3d.com/Manual/AssetBundles-Workfl
         }
         else
         {
+            //加载的模型名为为.manifest中的定义的模型名字而不是AB包的名字
             AssetBundle bundle = DownloadHandlerAssetBundle.GetContent(www);
             GameObject prefab = bundle.LoadAsset<GameObject>("car-911");
             GameObject car_911 = Instantiate(prefab) as GameObject;
