@@ -182,3 +182,5 @@ AssetBundles官方文档 --> https://docs.unity3d.com/Manual/AssetBundles-Workfl
         }
     }
   ```
+  ## 模型添加点击事件
+  
