@@ -185,3 +185,8 @@ AssetBundles官方文档 --> https://docs.unity3d.com/Manual/AssetBundles-Workfl
   ## 模型添加点击事件
   ### 添加Mesh Collider组件 或者Box Collider等碰撞体
   不同的效率不同
+  ## 如何让模型拥有透明效果
+  ### 只需更改材质（Material）的渲染模式为（Rendering Mode）为Fade模式 然后再调整颜色的透明度即可
+  ## 模型更改旋转的中心点方法
+  ### 只需要给要旋转的物体添加一个空的Object组件然后调整父组件的位置即可。 
+   ~ 例如 将车门的中心点 从中间改为左侧只需要将一个空的物体拖动至车门的左侧，然后将车门模型放入这个空物体即可
