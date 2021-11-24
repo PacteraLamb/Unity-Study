@@ -4,6 +4,9 @@
   1. 实现demo1 https://app.3dcat.live/share-app?appName=ASTON&appKey=x1jANFViE42JDbjR&official=true 
 # 一些实用库
 ## Dotween 一个很实用的动画库
+# 如何解决切换视角进入车内产生的穿透现象
+
+做两个相机渲染  然后到门时切换渲染，
 
 
 # Unity-UI Toolkit. &&  UGUI
