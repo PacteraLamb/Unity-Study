@@ -1,11 +1,14 @@
 # 一些行业案例
+
 # VR看车
+
 ## 3D Cat 主要是做云渲染 https://www.3dcat.live/demo.html   
   1. 实现demo1 https://app.3dcat.live/share-app?appName=ASTON&appKey=x1jANFViE42JDbjR&official=true 
+ 
 # 一些实用库
 ## Dotween 一个很实用的动画库
-# 如何解决切换视角进入车内产生的穿透现象
 
+# 如何解决切换视角进入车内产生的穿透现象
 做两个相机渲染  然后到门时切换渲染，
 
 
@@ -16,12 +19,14 @@
   - 2.从菜单中选择 Add package from git URL… 
   - 3.在文本字段中，输入 com.unity.ui 
   - 4.单击 Add。
+  
 ## 2.安装UI Builder
    - 通过修改项目下-->Packages-->manifest.json 方式安装
       - 添加 "com.unity.ui.builder": "1.0.0-preview.18"
          - 关于版本的问题我的理解是要和UIToolkit对应起来，如果出现错误unity会提示你修改的。
    - 应该有其他安装方式,暂时没有过多关注.
    - 官方安装方式 https://docs.unity3d.com/Packages/com.unity.ui.builder@1.0/manual/index.html
+   
 ## 3.编写一个Hello world!
    1. 创建一个空的GameObject
       - Hierarchy 下右键 --> Create Empty
@@ -65,6 +70,7 @@
       文字水平垂直居中 -unity-text-align: middle-center;
       文字加粗 -unity-font-style: bold;
     ```
+   
 # UGUI
 
 ##如何让按钮之类的提示信息跟随模型，而不是固定在屏幕上
@@ -86,6 +92,7 @@
   
   
 # Unity中一些脚本的笔记
+
 ## 1.通过实现IPointerClickHandler接口来实现点击事件
 直接挂到物体上即可实现点击，不需要其它的指定
 ```c#
@@ -106,11 +113,13 @@ public class ChangeShader : MonoBehaviour,IPointerClickHandler
     }
 }
 ```
+
 ## 2.关于 Color类的事项
 当使用RGB值时要/255f 才能的到相应的值
 ```c#
   new Color(68 / 255f, 138 / 255f, 255 / 255f))
 ```
+
 ## 3.关于使用Resources加载本地模型的问题
 ### 加载的模型可能会位于（0，0，0）坐标，如果此时相机的坐标也是0，0，0难么可能会导致无法看到加载的物体，此时需要动态的设置一下加载的物体的坐标以达到想要的效果
 ```c#
@@ -120,8 +129,10 @@ public class ChangeShader : MonoBehaviour,IPointerClickHandler
   GameObject cube = Instantiate(cubePreb) as GameObject;
   cube.transform.position = new Vector3(0,0,10);
  ```
+ 
 ## 4.关于unity的打包AssetBundles和加载问题
 AssetBundles官方文档 --> https://docs.unity3d.com/Manual/AssetBundles-Workflow.html
+
 ###  打包
 1.构建 AssetBundles
   在 Assets 文件夹中创建一个名为 Editor 的文件夹，并在该文件夹中放置一个包含以下内容的脚本：
@@ -170,6 +181,7 @@ AssetBundles官方文档 --> https://docs.unity3d.com/Manual/AssetBundles-Workfl
       }
     }
   ```
+  
   3.自己托管AB包  结合UnityWebRequest实现动态加载
   ```c#
     IEnumerator InstantiateObject()
@@ -192,11 +204,14 @@ AssetBundles官方文档 --> https://docs.unity3d.com/Manual/AssetBundles-Workfl
         }
     }
   ```
+  
   ## 模型添加点击事件
   ### 添加Mesh Collider组件 或者Box Collider等碰撞体
-  不同的效率不同
+  不同组件的效率不同
+  
   ## 如何让模型拥有透明效果
   ### 只需更改材质（Material）的渲染模式为（Rendering Mode）为Fade模式 然后再调整颜色的透明度即可
+  
   ## 模型更改旋转的中心点方法
   ### 只需要给要旋转的物体添加一个空的Object组件然后调整父组件的位置即可。 
    ~ 例如 将车门的中心点 从中间改为左侧只需要将一个空的物体拖动至车门的左侧，然后将车门模型放入这个空物体即可
