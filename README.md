@@ -66,6 +66,9 @@
       文字加粗 -unity-font-style: bold;
     ```
 # UGUI
+##如何让按钮之类的提示信息跟随模型，而不是固定在屏幕上
+  - 如果是UI需要先将Canvas的渲染模式改成World Space 然后将UI放到模型之下即可,此时的模型就相当于一个模型物体
+    - 更改渲染模式选中要更改的UI右侧<b>Inspector</b>-->Canvas组件-->Render Mode
 ## 当使用Canvas Group模拟点击的显示与隐藏时，可能会因为图层顺序原因导致无法点击。
   - 解决办法。在外层套一个空的GameObject，通过SetActive来控制物体的显示与隐藏
 ## 如何将Canvas导出复用
