@@ -216,9 +216,15 @@ AssetBundles官方文档 --> https://docs.unity3d.com/Manual/AssetBundles-Workfl
   ### 只需要给要旋转的物体添加一个空的Object组件然后调整父组件的位置即可。 
    ~ 例如 将车门的中心点 从中间改为左侧只需要将一个空的物体拖动至车门的左侧，然后将车门模型放入这个空物体即可
    
-  ## 实现物体A绕物体B旋转
-  ## A.transform.RotateAround(
-    B.transform.position,
-    绕什么轴旋转,
-    旋转角度
-    )
+  ## 实现鼠标右键左右滑动控制A围绕B旋转
+  targetObject --> A
+  centerObject --> B
+  ```c#
+    if (Input.GetMouseButton(1)) { 
+        targetObject.transform.RotateAround(
+            centerObject.transform.position,
+            Vector3.up,
+            Input.GetAxis("Mouse X") * speed
+            );
+    }
+  ```
