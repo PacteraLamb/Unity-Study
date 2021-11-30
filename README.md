@@ -93,7 +93,7 @@
   
 # Unity中一些脚本的笔记
 
-## 1.通过实现IPointerClickHandler接口来实现点击事件
+## 1.通过实现IPointerClickHandler接口来实现点击事件 只作用于UI  3d物体使用OnMouseDown来实现
 直接挂到物体上即可实现点击，不需要其它的指定
 ```c#
 public class ChangeShader : MonoBehaviour,IPointerClickHandler
