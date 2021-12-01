@@ -231,3 +231,9 @@ AssetBundles官方文档 --> https://docs.unity3d.com/Manual/AssetBundles-Workfl
             );
     }
   ```
+  
+ ## 当使用GameObject.Find获取物体时可能出现的空指针异常
+ ###
+ 当我们使用GameObject.Find获取一个物体时可能会报错 
+  unity NullReferenceException: Object reference not set to an instance of an object
+  - 原因1：指定名称时没有加前缀的路径
