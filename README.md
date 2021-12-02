@@ -118,7 +118,7 @@ public class ChangeShader : MonoBehaviour,IPointerClickHandler
 ```
 
 ## 2.关于 Color类的事项
-当使用RGB值时要/255f 才能的到相应的值
+当使用RGB值时要/255f 才能的到相应的值,支持RGBA
 ```c#
   new Color(68 / 255f, 138 / 255f, 255 / 255f))
 ```
