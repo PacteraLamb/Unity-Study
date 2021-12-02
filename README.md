@@ -239,16 +239,17 @@ AssetBundles官方文档 --> https://docs.unity3d.com/Manual/AssetBundles-Workfl
   - 原因1：指定名称时没有加前缀的路径
        - 例如 UI/ChangePlane/ColorView  如果我们只写ColorView则会报错
  # 保持物体和相机的角度不变，参考此处的代码（可以套用到任意两个物体）
- ```//保持摄像机和目标物体的角度不变
-        //x + y = z
-        Quaternion temp = Quaternion.Euler(
-                Target.transform.rotation.eulerAngles
-                +
-                mycamera.transform.rotation.eulerAngles
-            );
-        Target.transform.rotation = Quaternion.Euler(
-            temp.eulerAngles
-            -
-            Target.transform.rotation.eulerAngles 
-            );
+ ```c#
+  //保持摄像机和目标物体的角度不变
+  //x + y = z
+  Quaternion temp = Quaternion.Euler(
+          Target.transform.rotation.eulerAngles
+          +
+          mycamera.transform.rotation.eulerAngles
+      );
+  Target.transform.rotation = Quaternion.Euler(
+      temp.eulerAngles
+      -
+      Target.transform.rotation.eulerAngles 
+      );
   ```
