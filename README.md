@@ -254,3 +254,25 @@ AssetBundles官方文档 --> https://docs.unity3d.com/Manual/AssetBundles-Workfl
       Target.transform.rotation.eulerAngles 
       );
   ```
+  # 延迟执行
+  
+```c#
+using System.Collections;
+using UnityEngine;
+using System;
+public class Pactera_Delay : MonoBehaviour
+{
+    public static IEnumerator DelayToInvoke(Action action, float delaySeconds)
+    {
+        yield return new WaitForSeconds(delaySeconds);
+        action();
+    }
+
+    /* 调用
+     * StartCoroutine(Pactera_Delay.DelayToInvoke(() => {
+                }, 1f));
+     */
+}
+```
+
+
